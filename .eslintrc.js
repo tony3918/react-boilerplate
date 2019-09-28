@@ -28,5 +28,8 @@ module.exports = {
   rules: {
     'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }],
     'spaced-comment': 0,
+    'no-param-reassign': [1, { props: false }],
+    'no-unused-vars': 0,
+    'import/prefer-default-export': 0,
   },
 };
