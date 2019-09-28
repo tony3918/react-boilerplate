@@ -1,5 +1,9 @@
 import produce from 'immer';
-import { createStandardAction, createReducer, ActionType } from 'typesafe-actions';
+import {
+  createStandardAction,
+  createReducer,
+  ActionType,
+} from 'typesafe-actions';
 import { Dispatch } from 'redux';
 import * as ExampleAPI from 'lib/api/example';
 import { RootAction } from '.';
@@ -40,12 +44,12 @@ export type ExampleState = {
 const initialState: ExampleState = { example: { msg: '' } };
 
 /* REDUCERS */
-const exampleReducer = createReducer<ExampleState, ExampleAction>(initialState).handleAction(
-  setExample,
-  (state, action) =>
-    produce(state, draft => {
-      draft.example.msg = action.payload.example;
-    })
+const exampleReducer = createReducer<ExampleState, ExampleAction>(
+  initialState
+).handleAction(setExample, (state, action) =>
+  produce(state, draft => {
+    draft.example.msg = action.payload.example;
+  })
 );
 
 export default exampleReducer;

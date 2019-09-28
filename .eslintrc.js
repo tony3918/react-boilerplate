@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
+    jest: true,
   },
   extends: ['airbnb', 'plugin:prettier/recommended'],
   globals: {
@@ -31,5 +32,10 @@ module.exports = {
     'no-param-reassign': [1, { props: false }],
     'no-unused-vars': 0,
     'import/prefer-default-export': 0,
+    'import/no-extraneous-dependencies': [
+      0,
+      { devDependencies: ['**/*.test.js'] },
+    ],
+    'react/prop-types': 0,
   },
 };

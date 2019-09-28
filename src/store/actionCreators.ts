@@ -4,4 +4,7 @@ import store from './index';
 
 const { dispatch } = store;
 
-export const ExampleActions = bindActionCreators(exampleActionCreators, dispatch);
+export const ExampleActions = bindActionCreators(
+  exampleActionCreators,
+  dispatch
+);
