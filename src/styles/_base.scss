@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input {
+  font-size: inherit;
+  font-family: inherit;
+  outline: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img,
+embed,
+object,
+video {
+  max-width: 100%;
+}
+
+img {
+  object-fit: contain;
+  overflow: hidden;
+}
+
+button {
+  font-size: inherit;
+  font-family: inherit;
+  outline: none;
+  border: none;
+  background: transparent;
+  &:hover {
+    cursor: pointer;
+  }
+  &:disabled {
+    cursor: default;
+    color: inherit;
+  }
+}
